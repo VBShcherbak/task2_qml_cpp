@@ -26,8 +26,8 @@ Window {
             model: theModel
             delegate: Square {
                 visible: number === 16 ? false : true
-                width: parent.height/4
-                height: width
+                width: GridView.view.cellWidth
+                height: GridView.view.cellHeight
                 text: number
                 onSwap: {
                     theModel.move(index);
@@ -69,7 +69,6 @@ Window {
         onClicked: {
             theModel.mixNumbers();
             win.visible = false;
-            //board.forceLayout();
         }
         background: Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
@@ -79,7 +78,5 @@ Window {
             radius: 5
         }
     }
-
-
 }
 

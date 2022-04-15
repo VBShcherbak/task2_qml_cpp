@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     Fifteen fifteen;
-    std::cout << fifteen << std::endl;
     qmlRegisterType<Fifteen>("task.two.qml.cpp", 1, 0, "Fifteen");
 
     QQmlApplicationEngine engine;
